@@ -1,4 +1,4 @@
-import { Box, Typography, Slide } from "@mui/material";
+import { Box, Typography, Slide, Fade } from "@mui/material";
 
 
 export default function LandingSection() {
@@ -18,7 +18,7 @@ export default function LandingSection() {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                background: 'linear-gradient(to right, rgb(0, 0, 0, 0.5), rgba(0,0,0, 0.5))',
+                background: 'linear-gradient(to right, rgb(0, 0, 0, 0.7), rgba(0,0,0, 0.7))',
                 zIndex: 1
             }
         }}>
@@ -30,7 +30,7 @@ export default function LandingSection() {
                 timeout={{ enter: 900, exit: 300 }}
             >
                 <Box sx={{ position: 'absolute', top: '18vh', left: '15vw', zIndex: 2 }}>
-                    <Typography variant="h2" fontWeight={"bold"} sx={{ color: 'white' }}>
+                    <Typography variant="h3" fontWeight={"bold"} sx={{ color: 'white' }}>
                         Welcome to
                     </Typography>
                 </Box>
@@ -55,10 +55,20 @@ export default function LandingSection() {
                     zIndex: 1
                 }} />
             </Slide>
-            <Typography variant="h3" fontWeight={"bold"} sx={{ position: 'absolute', bottom: "18vh", color: "#fff", zIndex: 2 }}>
-                Call For papers
-            </Typography>
-
+            <Fade
+                in={true}
+                timeout={{ enter: 800 }}
+                style={{ transitionDelay: 500 }}
+            >
+                <Box sx={{ display: 'flex', flexDirection: 'column', width: '100vw', justifyContent: 'center', alignContent: 'center', alignItems: 'center', position: 'absolute', bottom: "12vh", zIndex: 2 }}>
+                    <Typography variant="h4" fontWeight={"bold"} sx={{ color: "#fff", zIndex: 2 }}>
+                        29th November 2024
+                    </Typography>
+                    <Typography variant="h4" fontWeight={"bold"} sx={{ color: "#8c8c8c", zIndex: 2 }}>
+                        at Daystar University
+                    </Typography>
+                </Box>
+            </Fade>
         </Box>
 
     )

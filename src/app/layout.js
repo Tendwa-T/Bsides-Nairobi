@@ -1,22 +1,40 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import MainLayout from "./components/layout";
+import { Roboto } from "next/font/google";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "./theme";
+import "@fontsource/roboto/100.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700"], // Specify the weights you want to include
+  subsets: ["latin"], // Specify subsets
+  display: "swap", // Use `swap` to avoid invisible text during load
+});
 
 export const metadata = {
-  title: "Bsides Nairobi",
+  title: "BSidesNAI",
   description: "Bsides Nairobi Official Website",
+  icons: {
+    icon: "../images/bsidesLogo.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <AppRouterCacheProvider>
-          <MainLayout>{children}</MainLayout>
-        </AppRouterCacheProvider>
+    <html lang="en" className={roboto.className}>
+      <body>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <AppRouterCacheProvider>
+            <MainLayout>{children}</MainLayout>
+          </AppRouterCacheProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

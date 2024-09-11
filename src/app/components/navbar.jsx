@@ -1,7 +1,7 @@
 "use client"
 
 import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Menu } from "@mui/icons-material";
 import Image from "next/image";
@@ -9,8 +9,24 @@ import Image from "next/image";
 
 export default function NavBarComponent({ navItems, children }) {
     const drawerWidth = 240;
-
+    const [isScrolled, setIsScrolled] = useState(false)
     const [mobileOpen, setMobileOpen] = useState(false);
+
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > (window.innerHeight - 500)) {
+            setIsScrolled(true)
+        } else {
+            setIsScrolled(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -36,7 +52,12 @@ export default function NavBarComponent({ navItems, children }) {
     return (
         <Box sx={{ display: 'flex', zIndex: 10 }}>
             <CssBaseline />
-            <AppBar component={'nav'} sx={{ color: "#fff" }} color="transparent">
+            <AppBar position="fixed" component={'nav'} sx={{ color: "#fff" }}
+                style={{
+                    backgroundColor: isScrolled ? "#000000" : 'transparent',
+                    transition: 'background-color 0.3s ease-in-out'
+                }}
+            >
                 <Toolbar>
                     <IconButton
                         color="inherit"
