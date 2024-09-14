@@ -123,14 +123,14 @@ export default function EventSection() {
               </b>
             </Box>
             <Typography textAlign={"center"} variant="body1" fontSize={"1.4em"}>
-              It seeks innovative presentations with practical demonstrations or
-              actionable research, with an emphasis on policy and governance.
-              Two presentation slots are reserved for academic contributors,
-              highlighting the importance of scholarly input. To elevate the
-              event, preference will be given to speakers with practical
-              experience, ensuring presentations are grounded in real-world
-              applications. The goal is to explore the latest in cybersecurity
-              and address current and future challenges.
+              We are seeking innovative presentations with practical
+              demonstrations or actionable research, with an emphasis on policy
+              and governance. We have two presentation slots reserved for
+              academic contributors, highlighting the importance of scholarly
+              input. To elevate the event, preference will be given to speakers
+              with practical experience, ensuring presentations are grounded in
+              real-world applications. Our goal is to explore the latest in
+              cybersecurity and address current and future challenges.
             </Typography>
           </Box>
         </Grow>

@@ -88,7 +88,7 @@ export default function DonateSection() {
           >
             <Typography variant="h5" textAlign={"center"}>
               Do you like the work we are doing at BSides?{" "}
-              <Link href="https://www.papercall.io/bsidesnrb24">
+              <Link href="https://paydexp.com/contribution/bsides-2024-conference">
                 Click here
               </Link>{" "}
               To support us
