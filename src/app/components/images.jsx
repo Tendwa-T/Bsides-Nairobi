@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { times } from "lodash";
 import Marquee from "react-marquee-slider";
 
@@ -9,9 +10,9 @@ export default function ImageMarquee() {
     width: "368px",
     height: "200px",
     borderRadius: "4px",
-    boxShadow: "0 7px 20px 0 rgba(0,0,0,0.12)",
     objectFit: "cover",
     objectPosition: "top",
+    $position: "top",
   });
 
   const photos = [

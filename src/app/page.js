@@ -5,6 +5,8 @@ import FooterSection from "./components/footerSection";
 import { Box } from "@mui/material";
 import EventSection from "./components/eventSection";
 import ImageMarquee from "./components/images";
+import CallForPapersSection from "./components/cfps";
+import GetTicketesSection from "./components/tickets";
 
 export default function Home() {
   return (
@@ -14,12 +16,13 @@ export default function Home() {
           { title: "Home", route: "/", sectionID: "" },
           { title: "About", route: "/#about", sectionID: "about" },
           { title: "Events", route: "/#event", sectionID: "event" },
-          { title: "Contact", route: "/#contact", sectionID: "contact" },
         ]}
       />
       <LandingSection />
-      <EventSection />
       <AboutSection />
+      <EventSection />
+      <CallForPapersSection />
+      <GetTicketesSection />
       <ImageMarquee />
       <FooterSection />
     </Box>

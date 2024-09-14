@@ -7,6 +7,7 @@ import {
   Divider,
   Drawer,
   IconButton,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -106,7 +107,14 @@ export default function NavBarComponent({ navItems }) {
               alt="Bsides Logo"
             />
           </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              width: "20em",
+              mr: "2em",
+              justifyContent: "space-around",
+            }}
+          >
             {navItems.map((item, index) => (
               <Button
                 key={index}
@@ -117,7 +125,13 @@ export default function NavBarComponent({ navItems }) {
               >
                 {item.title}
               </Button>
-            ))}
+            ))}{" "}
+            <Button
+              href="https://paydexp.com/contribution/bsides-2024-conference"
+              target="_blank"
+            >
+              Donate
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>

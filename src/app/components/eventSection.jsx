@@ -93,15 +93,36 @@ export default function EventSection() {
               flexGrow: 1,
               justifyContent: "center",
               alignItems: "center",
-              p: "1em",
               maxWidth: { xs: "100%", md: "50%" },
+              flexDirection: "column",
             }}
           >
-            <Typography textAlign={"center"} variant="body1" fontSize={"1.2em"}>
+            <Typography
+              textAlign={"center"}
+              variant="body1"
+              fontSize={"1.3em"}
+              component={"span"}
+            >
               The 2024 BSides Nairobi conference, themed &quot;
               <b>New Frontiers</b>&quot;, will focus on four key areas: <br />
-              <b>Critical Information Infrastructure</b>, <b>Cloud Computing</b>
-              , <b>Artificial Intelligence</b>, and <b>Data Privacy</b>.<br />{" "}
+            </Typography>
+            <Box
+              sx={{
+                justifySelf: "center",
+                alignSelf: "center",
+                fontSize: "1.2em",
+              }}
+            >
+              <b>
+                <ul>
+                  <li>- Critical Information Infrastructure</li>
+                  <li>- Cloud Computing</li>
+                  <li>- Artificial Intelligence</li>
+                  <li>- Data Privacy</li>
+                </ul>
+              </b>
+            </Box>
+            <Typography textAlign={"center"} variant="body1" fontSize={"1.4em"}>
               It seeks innovative presentations with practical demonstrations or
               actionable research, with an emphasis on policy and governance.
               Two presentation slots are reserved for academic contributors,
