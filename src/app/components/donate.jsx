@@ -4,12 +4,12 @@ import { Box, Grow, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
-export default function GetTicketesSection() {
+export default function DonateSection() {
   const [inView, setInView] = useState(false);
   const elementRef = useRef(null);
 
   useEffect(() => {
-    if (window.location.hash === "#cfp") {
+    if (window.location.hash === "#donate") {
       elementRef.current.scrollIntoView({ behavior: "smooth" });
     }
     const observer = new IntersectionObserver(
@@ -44,20 +44,37 @@ export default function GetTicketesSection() {
         display: "flex",
         width: "100vw",
         pt: "3em",
-        mb: "1em",
-        bgcolor: "#232423",
+        flexDirection: "column",
+        bgcolor: "whitesmoke",
       }}
     >
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column-reverse", md: "row" },
+          flexDirection: { xs: "column", md: "row" },
           width: "100vw",
           my: "1em",
           px: "1em",
           justifyContent: "space-around",
         }}
       >
+        <Grow in={inView} timeout={1500}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              p: "0.7em",
+            }}
+          >
+            <Image
+              src={"/images/donate.jpeg"}
+              alt="Event Poster"
+              width={500}
+              height={400}
+            />
+          </Box>
+        </Grow>
         <Grow in={inView} {...(inView ? { timeout: 2000 } : {})}>
           <Box
             sx={{
@@ -69,34 +86,13 @@ export default function GetTicketesSection() {
               flexDirection: { xs: "column", md: "row" },
             }}
           >
-            <Typography
-              variant="h5"
-              textAlign={"center"}
-              sx={{ color: "#fff" }}
-            >
-              Do you have your Ticket? Get it from
-              <Link href="https://paydexp.com/bsides-nairobi-2024-conference-0">
-                {" "}
-                here
+            <Typography variant="h5" textAlign={"center"}>
+              Do you like the work we are doing at BSides?{" "}
+              <Link href="https://www.papercall.io/bsidesnrb24">
+                Click here
               </Link>{" "}
+              To support us
             </Typography>
-          </Box>
-        </Grow>
-        <Grow in={inView} timeout={1500}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              p: "0.7em",
-            }}
-          >
-            <Image
-              src={"/images/tickets.jpg"}
-              alt="Event Poster"
-              width={500}
-              height={400}
-            />
           </Box>
         </Grow>
       </Box>

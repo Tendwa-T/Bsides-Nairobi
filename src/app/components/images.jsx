@@ -12,7 +12,6 @@ export default function ImageMarquee() {
     borderRadius: "4px",
     objectFit: "cover",
     objectPosition: "top",
-    $position: "top",
   });
 
   const photos = [
@@ -35,8 +34,9 @@ export default function ImageMarquee() {
     <Box
       sx={{
         display: "flex",
-        height: "40em",
+        height: "35em",
         width: "100vw",
+        mt: "3em",
         flexDirection: "column",
       }}
     >

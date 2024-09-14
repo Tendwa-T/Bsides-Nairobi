@@ -108,13 +108,12 @@ export default function LandingSection() {
             variant="h4"
             fontWeight={"bold"}
             textAlign={"center"}
-            sx={{ color: "#8c8c8c", zIndex: 2, fontSize: "2em" }}
+            sx={{ color: "#a3a3a3", zIndex: 2, fontSize: "2em" }}
           >
-            Location: TBD
+            United States International University-Africa
           </Typography>
         </Box>
       </Fade>
     </Box>
   );
 }
-

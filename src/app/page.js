@@ -7,6 +7,7 @@ import EventSection from "./components/eventSection";
 import ImageMarquee from "./components/images";
 import CallForPapersSection from "./components/cfps";
 import GetTicketesSection from "./components/tickets";
+import DonateSection from "./components/donate";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <AboutSection />
       <EventSection />
       <CallForPapersSection />
+      <DonateSection />
       <GetTicketesSection />
       <ImageMarquee />
       <FooterSection />
