@@ -75,7 +75,7 @@ export default function GetTicketesSection() {
               sx={{ color: "#fff" }}
             >
               Do you have your Ticket? Get it from
-              <Link href="https://paydexp.com/bsides-nairobi-2024-conference-0">
+              <Link href="https://paydexp.com/bsides-nairobi-2024-conference">
                 {" "}
                 here
               </Link>{" "}
