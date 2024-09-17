@@ -34,22 +34,25 @@ export default function ImageMarquee() {
     <Box
       sx={{
         display: "flex",
-        height: "35em",
         width: "100vw",
-        mt: "3em",
+        mt: "5em",
+        mb: "4em",
         flexDirection: "column",
       }}
     >
       <Typography
         textAlign={"center"}
-        variant="h4"
+        variant="h3"
         fontWeight={100}
         gutterBottom
+        sx={{
+          mb: "2em",
+        }}
       >
         Some of our Awesome Moments together
       </Typography>
       <Box sx={{ height: 200 }}>
-        <Marquee velocity={25}>
+        <Marquee velocity={16}>
           {times(7, Number).map((id) => (
             <Photo
               src={photos[id]}
@@ -60,7 +63,7 @@ export default function ImageMarquee() {
         </Marquee>
       </Box>
       <Box sx={{ height: "5em" }} />
-      <Marquee velocity={25}>
+      <Marquee velocity={16}>
         {times(7, Number).map((id) => (
           <Photo
             src={photos[id + 7]}

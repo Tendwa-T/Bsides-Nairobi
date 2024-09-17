@@ -15,14 +15,14 @@ export default function PartnerSection() {
     height: "200px",
     borderRadius: "4px",
     objectFit: "contain",
-    objectPosition: "top",
+    objectPosition: "center",
   });
   const photos = [
     "/images/partners/CAK.jpg",
     "/images/partners/ctfroom.png",
     "/images/partners/cyberShujaa.webp",
     "/images/partners/cyberTalent.png",
-    "/images/partners/ekraal.png",
+    "/images/partners/ekraalDark.jpeg",
     "/images/partners/freaks.png",
     "/images/partners/inMark.jpg",
     "/images/partners/KCSFA.png",
@@ -36,22 +36,25 @@ export default function PartnerSection() {
     <Box
       sx={{
         display: "flex",
-        height: "35em",
         width: "100vw",
-        mt: "3em",
+        mt: "5em",
+        mb: "4em",
         flexDirection: "column",
       }}
     >
       <Typography
         textAlign={"center"}
-        variant="h4"
+        variant="h3"
         fontWeight={100}
         gutterBottom
+        sx={{
+          mb: "2em",
+        }}
       >
         Meet our partners
       </Typography>
       <Box sx={{ height: 200 }}>
-        <Marquee velocity={25} direction="ltr">
+        <Marquee velocity={18} direction="ltr">
           {times(7, Number).map((id) => (
             <Photo
               src={photos[id]}
@@ -62,7 +65,7 @@ export default function PartnerSection() {
         </Marquee>
       </Box>
       <Box sx={{ height: "5em" }} />
-      <Marquee velocity={25} direction="ltr">
+      <Marquee velocity={18} direction="ltr">
         {times(5, Number).map((id) => (
           <Photo
             src={photos[id + 7]}

@@ -65,10 +65,15 @@ export default function CallForPapersSection() {
               justifyContent: "center",
               alignItems: "center",
               maxWidth: { xs: "100%", md: "50%" },
+              py: { xs: "3em", sm: "2em" },
               flexDirection: { xs: "column", md: "row" },
             }}
           >
-            <Typography variant="h5" textAlign={"center"}>
+            <Typography
+              variant="h5"
+              textAlign={"center"}
+              sx={{ fontSize: { xs: "1em", sm: "1.5em" } }}
+            >
               Would you like to give a talk during our event?{" "}
               <Link href="https://www.papercall.io/bsidesnrb24">
                 Click here

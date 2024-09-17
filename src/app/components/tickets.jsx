@@ -66,13 +66,17 @@ export default function GetTicketesSection() {
               justifyContent: "center",
               alignItems: "center",
               maxWidth: { xs: "100%", md: "50%" },
+              py: { xs: "3em", md: "2em" },
               flexDirection: { xs: "column", md: "row" },
             }}
           >
             <Typography
               variant="h5"
               textAlign={"center"}
-              sx={{ color: "#fff" }}
+              sx={{
+                color: "#fff",
+                fontSize: { xs: "1em", sm: "1.5em" },
+              }}
             >
               Do you have your Ticket? Get it from
               <Link href="https://paydexp.com/bsides-nairobi-2024-conference">

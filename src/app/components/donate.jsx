@@ -38,7 +38,7 @@ export default function DonateSection() {
   return (
     <Box
       component={"section"}
-      id="cfp"
+      id="donate"
       ref={elementRef}
       sx={{
         display: "flex",
@@ -46,6 +46,7 @@ export default function DonateSection() {
         pt: "3em",
         flexDirection: "column",
         bgcolor: "whitesmoke",
+        pb: { xs: "1em", md: "2em" },
       }}
     >
       <Box
@@ -86,7 +87,14 @@ export default function DonateSection() {
               flexDirection: { xs: "column", md: "row" },
             }}
           >
-            <Typography variant="h5" textAlign={"center"}>
+            <Typography
+              variant="h5"
+              textAlign={"center"}
+              sx={{
+                py: { xs: "3em", sm: "2em" },
+                fontSize: { xs: "1em", sm: "1.5em" },
+              }}
+            >
               Do you like the work we are doing at BSides?{" "}
               <Link href="https://paydexp.com/contribution/bsides-2024-conference">
                 Click here

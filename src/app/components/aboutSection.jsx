@@ -34,7 +34,11 @@ export default function AboutSection() {
         </Typography>
         <Box sx={{ height: "2em" }} />
         <Box sx={{ px: { xs: "1em", lg: "10em" } }}>
-          <Typography variant="body1" textAlign={"center"} fontSize={"1.2em"}>
+          <Typography
+            variant="body1"
+            textAlign={"center"}
+            sx={{ fontSize: { xs: "1em", sm: "1.5em" } }}
+          >
             Security BSides is a non-profit, community-driven, event built for
             and by members of the information security community. This creates
             opportunities for individuals to both present and participate in an

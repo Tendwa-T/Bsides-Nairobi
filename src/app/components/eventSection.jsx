@@ -100,8 +100,8 @@ export default function EventSection() {
             <Typography
               textAlign={"center"}
               variant="body1"
-              fontSize={"1.3em"}
               component={"span"}
+              sx={{ fontSize: { xs: "1em", sm: "1.5em", md: "2em" } }}
             >
               The 2024 BSides Nairobi conference, themed &quot;
               <b>New Frontiers</b>&quot;, will focus on four key areas: <br />
@@ -110,7 +110,7 @@ export default function EventSection() {
               sx={{
                 justifySelf: "center",
                 alignSelf: "center",
-                fontSize: "1.2em",
+                fontSize: { xs: "1em", sm: "1.5em" },
               }}
             >
               <b>
@@ -122,7 +122,11 @@ export default function EventSection() {
                 </ul>
               </b>
             </Box>
-            <Typography textAlign={"center"} variant="body1" fontSize={"1.4em"}>
+            <Typography
+              textAlign={"center"}
+              variant="body1"
+              sx={{ fontSize: { xs: "1em", sm: "1.5em" } }}
+            >
               We are seeking innovative presentations with practical
               demonstrations or actionable research, with an emphasis on policy
               and governance. We have two presentation slots reserved for

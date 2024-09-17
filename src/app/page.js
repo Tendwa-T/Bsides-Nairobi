@@ -26,8 +26,8 @@ export default function Home() {
       <CallForPapersSection />
       <DonateSection />
       <GetTicketesSection />
-      <ImageMarquee />
       <PartnerSection />
+      <ImageMarquee />
       <FooterSection />
     </Box>
   );
