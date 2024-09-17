@@ -74,6 +74,18 @@ export default function NavBarComponent({ navItems }) {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem key={"drawerBtn"} disablePadding>
+          <ListItemButton
+            sx={{ textAlign: "center" }}
+            onClick={() =>
+              router.push(
+                "https://paydexp.com/contribution/bsides-2024-conference",
+              )
+            }
+          >
+            <ListItemText primary={"Donate"} />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
