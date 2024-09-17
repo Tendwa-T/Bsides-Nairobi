@@ -5,31 +5,33 @@ import { styled } from "@mui/material/styles";
 import { times } from "lodash";
 import Marquee from "react-marquee-slider";
 
-export default function ImageMarquee() {
+export default function PartnerSection() {
   const Photo = styled("img")({
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
     width: "368px",
     height: "200px",
     borderRadius: "4px",
-    objectFit: "cover",
+    objectFit: "contain",
     objectPosition: "top",
   });
-
   const photos = [
-    "/images/gallery/event1.JPG",
-    "/images/gallery/event10.JPG",
-    "/images/gallery/event11.JPG",
-    "/images/gallery/event12.JPG",
-    "/images/gallery/event13.JPG",
-    "/images/gallery/event14.JPG",
-    "/images/gallery/event2.JPG",
-    "/images/gallery/event3.JPG",
-    "/images/gallery/event4.JPG",
-    "/images/gallery/event5.JPG",
-    "/images/gallery/event6.JPG",
-    "/images/gallery/event7.JPG",
-    "/images/gallery/event8.JPG",
-    "/images/gallery/event9.JPG",
+    "/images/partners/CAK.jpg",
+    "/images/partners/ctfroom.png",
+    "/images/partners/cyberShujaa.webp",
+    "/images/partners/cyberTalent.png",
+    "/images/partners/ekraal.png",
+    "/images/partners/freaks.png",
+    "/images/partners/inMark.jpg",
+    "/images/partners/KCSFA.png",
+    "/images/partners/microsoft.jpg",
+    "/images/partners/startinenv2.jpeg",
+    "/images/partners/trendMicro.png",
+    "/images/partners/usiu-logo.png",
   ];
+
   return (
     <Box
       sx={{
@@ -46,26 +48,26 @@ export default function ImageMarquee() {
         fontWeight={100}
         gutterBottom
       >
-        Some of our Awesome Moments together
+        Meet our partners
       </Typography>
       <Box sx={{ height: 200 }}>
-        <Marquee velocity={25}>
+        <Marquee velocity={25} direction="ltr">
           {times(7, Number).map((id) => (
             <Photo
               src={photos[id]}
               key={`eventImage-${id}`}
-              sx={{ ml: "87px" }}
+              sx={{ mr: "87px" }}
             />
           ))}
         </Marquee>
       </Box>
       <Box sx={{ height: "5em" }} />
-      <Marquee velocity={25}>
-        {times(7, Number).map((id) => (
+      <Marquee velocity={25} direction="ltr">
+        {times(5, Number).map((id) => (
           <Photo
             src={photos[id + 7]}
             key={`eventImage-${id + 7}`}
-            sx={{ ml: "7px", mr: "80px" }}
+            sx={{ mr: "7px", ml: "80px" }}
           />
         ))}
       </Marquee>

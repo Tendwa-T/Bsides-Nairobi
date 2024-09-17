@@ -8,6 +8,7 @@ import ImageMarquee from "./components/images";
 import CallForPapersSection from "./components/cfps";
 import GetTicketesSection from "./components/tickets";
 import DonateSection from "./components/donate";
+import PartnerSection from "./components/partners";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <DonateSection />
       <GetTicketesSection />
       <ImageMarquee />
+      <PartnerSection />
       <FooterSection />
     </Box>
   );

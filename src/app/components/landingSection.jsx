@@ -22,7 +22,7 @@ export default function LandingSection() {
           width: "100%",
           height: "100%",
           background:
-            "linear-gradient(to right, rgb(0, 0, 0, 0.8), rgba(0,0,0,0.8))",
+            "linear-gradient(to right, rgb(0, 0, 0, 0.85), rgba(0,0,0,0.85))",
           zIndex: 1,
         },
       }}
