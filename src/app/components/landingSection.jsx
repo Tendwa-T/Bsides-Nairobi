@@ -22,31 +22,11 @@ export default function LandingSection() {
           width: "100%",
           height: "100%",
           background:
-            "linear-gradient(to right, rgb(0, 0, 0, 0.7), rgba(0,0,0, 0.7))",
+            "linear-gradient(to right, rgb(0, 0, 0, 0.8), rgba(0,0,0,0.8))",
           zIndex: 1,
         },
       }}
     >
-      <Slide
-        direction="right"
-        in={true}
-        mountOnEnter
-        unmountOnExit
-        timeout={{ enter: 900, exit: 300 }}
-      >
-        <Box
-          sx={{ position: "absolute", top: "18vh", left: "15vw", zIndex: 2 }}
-        >
-          <Typography
-            variant="h3"
-            fontWeight={"bold"}
-            sx={{ color: "white", fontSize: "2em" }}
-          >
-            Welcome to
-          </Typography>
-        </Box>
-      </Slide>
-
       <Slide
         direction="left"
         in={true}
@@ -68,7 +48,7 @@ export default function LandingSection() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             position: "absolute",
-            top: "18vh",
+            top: { xs: "3vh", sm: "5vh", md: "15vh" },
             zIndex: 1,
           }}
         />
