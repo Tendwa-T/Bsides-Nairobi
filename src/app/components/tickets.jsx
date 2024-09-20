@@ -96,7 +96,7 @@ export default function GetTicketesSection() {
             }}
           >
             <Image
-              src={"/images/tickets.jpg"}
+              src={"/images/tickets.jpeg"}
               alt="Event Poster"
               width={500}
               height={400}
