@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Grow, Typography } from "@mui/material";
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function EventSection() {
@@ -78,7 +77,7 @@ export default function EventSection() {
               p: "1em",
             }}
           >
-            <Image
+            <img
               src={"/images/poster.jpeg"}
               alt="Event Poster"
               width={500}

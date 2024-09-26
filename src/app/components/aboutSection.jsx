@@ -30,7 +30,7 @@ export default function AboutSection() {
           fontWeight={"100"}
           fontSize={"3em"}
         >
-          About Bsides Nairobi
+          About BSides Nairobi
         </Typography>
         <Box sx={{ height: "2em" }} />
         <Box sx={{ px: { xs: "1em", lg: "10em" } }}>

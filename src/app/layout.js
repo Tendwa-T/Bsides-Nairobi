@@ -19,16 +19,14 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "BSidesNAI",
+  title: "BSides Nairobi",
   description: "Bsides Nairobi Official Website",
-  icons: {
-    icon: "../images/bsidesLogo.png",
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.className}`}>
+      <link rel="icon" href="../images/bsidesLogo.png" />
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />

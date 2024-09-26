@@ -20,12 +20,18 @@ export default function Home() {
           { title: "Events", route: "/#event", sectionID: "event" },
         ]}
       />
-      <LandingSection />
+      <LandingSection
+        image={"url(/images/nairobi.jpg)"}
+        textData={{
+          main: "Theme: New Frontiers",
+          secondary: "5th - 8th November 2024",
+          tertiary: "United States International University - Africa",
+        }}
+      />
       <AboutSection />
       <EventSection />
-      <CallForPapersSection />
-      <DonateSection />
       <GetTicketesSection />
+      <DonateSection />
       <PartnerSection />
       <ImageMarquee />
       <FooterSection />

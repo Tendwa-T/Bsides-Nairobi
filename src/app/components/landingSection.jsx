@@ -1,6 +1,7 @@
 import { Box, Typography, Slide, Fade } from "@mui/material";
 
-export default function LandingSection() {
+export default function LandingSection({ image, textData }) {
+  //"url(/images/nairobi.jpg)"
   return (
     <Box
       sx={{
@@ -9,7 +10,7 @@ export default function LandingSection() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        backgroundImage: "url(/images/nairobi.jpg)",
+        backgroundImage: `${image}`,
         backgroundSize: "cover",
         backgroundPosition: "start",
         backgroundRepeat: "no-repeat",
@@ -53,47 +54,75 @@ export default function LandingSection() {
           }}
         />
       </Slide>
-      <Fade in={true} timeout={{ enter: 800 }} style={{ transitionDelay: 500 }}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            width: "100vw",
-            justifyContent: "center",
-            alignContent: "center",
-            alignItems: "center",
-            position: "absolute",
-            bottom: "5vh",
-            zIndex: 2,
-          }}
+      {textData ? (
+        <Fade
+          in={true}
+          timeout={{ enter: 800 }}
+          style={{ transitionDelay: 500 }}
         >
-          <Typography
-            variant="h3"
-            fontWeight={"bold"}
-            textAlign={"center"}
-            sx={{ color: "#fff", zIndex: 2, fontSize: "3em" }}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: "100vw",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+              position: "absolute",
+              bottom: "5vh",
+              zIndex: 2,
+            }}
           >
-            Theme: New Frontiers
-          </Typography>
-          <Box sx={{ height: "2em" }} />
-          <Typography
-            variant="h4"
-            fontWeight={"bold"}
-            textAlign={"center"}
-            sx={{ color: "#fff", zIndex: 2, fontSize: "2.5em" }}
+            <Typography
+              variant="h3"
+              fontWeight={"bold"}
+              textAlign={"center"}
+              sx={{ color: "#fff", zIndex: 2, fontSize: "3em" }}
+            >
+              {textData.main}
+            </Typography>
+            <Box sx={{ height: "2em" }} />
+            <Typography
+              variant="h4"
+              fontWeight={"bold"}
+              textAlign={"center"}
+              sx={{ color: "#fff", zIndex: 2, fontSize: "2.5em" }}
+            >
+              {textData.secondary}
+            </Typography>
+            <Typography
+              variant="h4"
+              fontWeight={"bold"}
+              textAlign={"center"}
+              sx={{ color: "#a3a3a3", zIndex: 2, fontSize: "2em" }}
+            >
+              {textData.tertiary}
+            </Typography>
+          </Box>
+        </Fade>
+      ) : (
+        <Fade
+          in={true}
+          timeout={{ enter: 800 }}
+          style={{ transitionDelay: 500 }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: "100vw",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+              position: "absolute",
+              bottom: "8vh",
+              zIndex: 2,
+            }}
           >
-            5th - 8th November 2024
-          </Typography>
-          <Typography
-            variant="h4"
-            fontWeight={"bold"}
-            textAlign={"center"}
-            sx={{ color: "#a3a3a3", zIndex: 2, fontSize: "2em" }}
-          >
-            United States International University-Africa
-          </Typography>
-        </Box>
-      </Fade>
+            <img src="/Recap.svg" width={300} height={200} />
+          </Box>
+        </Fade>
+      )}
     </Box>
   );
 }

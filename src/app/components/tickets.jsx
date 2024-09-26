@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Grow, Link, Typography } from "@mui/material";
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function GetTicketesSection() {
@@ -79,7 +78,10 @@ export default function GetTicketesSection() {
               }}
             >
               Do you have your Ticket? Get it from
-              <Link href="https://paydexp.com/bsides-nairobi-2024-conference">
+              <Link
+                href="https://paydexp.com/bsides-nairobi-2024-conference"
+                target="_blank"
+              >
                 {" "}
                 here
               </Link>{" "}
@@ -95,7 +97,7 @@ export default function GetTicketesSection() {
               p: "0.7em",
             }}
           >
-            <Image
+            <img
               src={"/images/tickets.jpeg"}
               alt="Event Poster"
               width={500}

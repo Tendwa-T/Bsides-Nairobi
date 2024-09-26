@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Grow, Link, Typography } from "@mui/material";
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function DonateSection() {
@@ -68,7 +67,7 @@ export default function DonateSection() {
               p: "0.7em",
             }}
           >
-            <Image
+            <img
               src={"/images/donate.jpeg"}
               alt="Event Poster"
               width={500}
@@ -96,7 +95,10 @@ export default function DonateSection() {
               }}
             >
               Do you like the work we are doing at BSides?{" "}
-              <Link href="https://paydexp.com/contribution/bsides-2024-conference">
+              <Link
+                href="https://paydexp.com/contribution/bsides-2024-conference"
+                target="_blank"
+              >
                 Click here
               </Link>{" "}
               To support us

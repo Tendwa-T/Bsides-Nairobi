@@ -7,7 +7,6 @@ import {
   Divider,
   Drawer,
   IconButton,
-  Link,
   List,
   ListItem,
   ListItemButton,
@@ -18,7 +17,6 @@ import {
 import { useEffect, useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Menu } from "@mui/icons-material";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function NavBarComponent({ navItems }) {
@@ -111,8 +109,8 @@ export default function NavBarComponent({ navItems }) {
           >
             <Menu />
           </IconButton>
-          <Box sx={{ flexGrow: 1, display: { xs: "block" } }}>
-            <Image
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+            <img
               src={"/images/bsidesLogo.png"}
               width={100}
               height={100}

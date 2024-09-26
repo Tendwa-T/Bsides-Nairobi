@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Grow, Link, Typography } from "@mui/material";
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function CallForPapersSection() {
@@ -91,7 +90,7 @@ export default function CallForPapersSection() {
               p: "0.7em",
             }}
           >
-            <Image
+            <img
               src={"/images/callForPapers.jpeg"}
               alt="Event Poster"
               width={500}
