@@ -81,6 +81,7 @@ export default function GetTicketesSection() {
               <Link
                 href="https://paydexp.com/bsides-nairobi-2024-conference"
                 target="_blank"
+                rel="noopener"
               >
                 {" "}
                 here

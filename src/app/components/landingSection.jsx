@@ -1,6 +1,6 @@
 import { Box, Typography, Slide, Fade } from "@mui/material";
 
-export default function LandingSection({ image, textData }) {
+export default function LandingSection({ image, eventData, recapData }) {
   //"url(/images/nairobi.jpg)"
   return (
     <Box
@@ -54,7 +54,7 @@ export default function LandingSection({ image, textData }) {
           }}
         />
       </Slide>
-      {textData ? (
+      {eventData && (
         <Fade
           in={true}
           timeout={{ enter: 800 }}
@@ -79,7 +79,7 @@ export default function LandingSection({ image, textData }) {
               textAlign={"center"}
               sx={{ color: "#fff", zIndex: 2, fontSize: "3em" }}
             >
-              {textData.main}
+              {eventData.main}
             </Typography>
             <Box sx={{ height: "2em" }} />
             <Typography
@@ -88,7 +88,7 @@ export default function LandingSection({ image, textData }) {
               textAlign={"center"}
               sx={{ color: "#fff", zIndex: 2, fontSize: "2.5em" }}
             >
-              {textData.secondary}
+              {eventData.secondary}
             </Typography>
             <Typography
               variant="h4"
@@ -96,11 +96,13 @@ export default function LandingSection({ image, textData }) {
               textAlign={"center"}
               sx={{ color: "#a3a3a3", zIndex: 2, fontSize: "2em" }}
             >
-              {textData.tertiary}
+              {eventData.tertiary}
             </Typography>
           </Box>
         </Fade>
-      ) : (
+      )}
+
+      {recapData && (
         <Fade
           in={true}
           timeout={{ enter: 800 }}
@@ -115,11 +117,11 @@ export default function LandingSection({ image, textData }) {
               alignContent: "center",
               alignItems: "center",
               position: "absolute",
-              bottom: "8vh",
+              bottom: { xs: "15vh", sm: "5vh", md: "3vh" },
               zIndex: 2,
             }}
           >
-            <img src="/Recap.svg" width={300} height={200} />
+            <img src={recapData.img} width={900} height={600} />
           </Box>
         </Fade>
       )}

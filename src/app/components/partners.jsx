@@ -48,7 +48,7 @@ export default function PartnerSection() {
         fontWeight={100}
         gutterBottom
         sx={{
-          mb: "2em",
+          mb: "1em",
         }}
       >
         Meet our partners

@@ -98,6 +98,7 @@ export default function DonateSection() {
               <Link
                 href="https://paydexp.com/contribution/bsides-2024-conference"
                 target="_blank"
+                rel="noopener"
               >
                 Click here
               </Link>{" "}

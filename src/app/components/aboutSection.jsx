@@ -46,7 +46,11 @@ export default function AboutSection() {
             networking and collaboration. Our aim is to help develop the
             Information Security community in Kenya. If you would like to learn
             more or get involved, please email{" "}
-            <Link href="mailto:info@bsidesnairobi.ke" target="_blank">
+            <Link
+              href="mailto:info@bsidesnairobi.ke"
+              target="_blank"
+              rel="noopener"
+            >
               info@bsidesnairobi.ke
             </Link>
           </Typography>

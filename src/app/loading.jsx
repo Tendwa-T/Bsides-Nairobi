@@ -8,15 +8,14 @@ export default function LoadingPage() {
       sx={{
         display: "flex",
         width: "100vw",
-        height: "100%",
+        height: "100vh",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <CircularProgress />
-      <Typography variant="h1">Loading</Typography>
+      <CircularProgress size={50} />
+      <Typography variant="h3">Loading</Typography>
     </Box>
   );
 }
-

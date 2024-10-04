@@ -74,7 +74,7 @@ export default function CallForPapersSection() {
               sx={{ fontSize: { xs: "1em", sm: "1.5em" } }}
             >
               Would you like to give a talk during our event?{" "}
-              <Link href="https://www.papercall.io/bsidesnrb24">
+              <Link href="https://www.papercall.io/bsidesnrb24" rel="noopener">
                 Click here
               </Link>{" "}
               For more information

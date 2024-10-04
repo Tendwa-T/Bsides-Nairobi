@@ -11,19 +11,37 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  MenuItem,
+  Menu,
   Toolbar,
   Typography,
+  Collapse,
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Menu } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
+import { ExpandLess, ExpandMore, Menu as MenuIcon } from "@mui/icons-material";
 
 export default function NavBarComponent({ navItems }) {
   const drawerWidth = 240;
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const router = useRouter();
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [openNest, setOpenNest] = useState(true);
+  const menuOpen = Boolean(anchorEl);
+
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleNestClick = () => {
+    setOpenNest(!openNest);
+  };
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -55,8 +73,19 @@ export default function NavBarComponent({ navItems }) {
     setMobileOpen(!mobileOpen);
   };
 
+  const recapPages = [
+    {
+      recapTitle: "2022",
+      url: "/recap/2022",
+    },
+    {
+      recapTitle: "2023",
+      url: "/recap/2023",
+    },
+  ];
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Bsides Nairobi
       </Typography>
@@ -84,6 +113,28 @@ export default function NavBarComponent({ navItems }) {
             <ListItemText primary={"Donate"} />
           </ListItemButton>
         </ListItem>
+        <ListItem key={"recap-nest"} disablePadding>
+          <ListItemButton>
+            <ListItemButton onClick={handleNestClick}>
+              <ListItemText primary={"Recap"} />
+              {openNest ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+          </ListItemButton>
+        </ListItem>
+        <Collapse in={openNest} timeout="auto" unmountOnExit>
+          <List component={"div"}>
+            {recapPages.map((rec, index) => (
+              <ListItem key={index} disablePadding>
+                <ListItemButton
+                  sx={{ textAlign: "center", pl: 1 }}
+                  onClick={() => router.push(`${rec.url}`)}
+                >
+                  <ListItemText primary={rec.recapTitle} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Collapse>
       </List>
     </Box>
   );
@@ -105,9 +156,9 @@ export default function NavBarComponent({ navItems }) {
             aria-label="Open Sidebar"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ display: { xs: "block", sm: "none" }, color: "white" }}
           >
-            <Menu />
+            <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
             <img
@@ -115,12 +166,13 @@ export default function NavBarComponent({ navItems }) {
               width={100}
               height={100}
               alt="Bsides Logo"
+              onClick={() => router.push("/")}
             />
           </Box>
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
-              width: "20em",
+              width: "25em",
               mr: "2em",
               justifyContent: "space-around",
             }}
@@ -142,6 +194,33 @@ export default function NavBarComponent({ navItems }) {
             >
               Donate
             </Button>
+            <Box sx={{ zIndex: 10 }}>
+              <Button
+                id="recap-btn"
+                aria-controls={menuOpen ? "recap-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={menuOpen ? "true" : undefined}
+                onClick={handleMenuClick}
+              >
+                Recap
+              </Button>
+              <Menu
+                id="recap-menu"
+                anchorEl={anchorEl}
+                open={menuOpen}
+                onClose={handleMenuClose}
+                MenuListProps={{
+                  "aria-labelledby": "recap-btn",
+                }}
+              >
+                <MenuItem onClick={() => router.push("/recap/2022")}>
+                  2022 Recap
+                </MenuItem>
+                <MenuItem onClick={() => router.push("/recap/2023")}>
+                  2023 Recap
+                </MenuItem>
+              </Menu>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
