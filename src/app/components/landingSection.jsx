@@ -12,7 +12,7 @@ export default function LandingSection({ image, eventData, recapData }) {
         height: "100vh",
         backgroundImage: `${image}`,
         backgroundSize: "cover",
-        backgroundPosition: "start",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         position: "relative",
         "&::before": {
