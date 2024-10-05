@@ -7,6 +7,8 @@ export default function RecapEventSection({ eventData }) {
   const [inView, setInView] = useState(false);
   const elementRef = useRef(null);
 
+  const paragraphs = eventData.textData.split("\n\n");
+
   useEffect(() => {
     if (window.location.hash === "#event") {
       elementRef.current.scrollIntoView({ behavior: "smooth" });
@@ -96,14 +98,24 @@ export default function RecapEventSection({ eventData }) {
               flexDirection: "column",
             }}
           >
-            <Typography
-              textAlign={"center"}
-              variant="body1"
-              component={"span"}
-              sx={{ fontSize: { xs: "1em", sm: "1.5em" } }}
-            >
-              {eventData.textData}
-            </Typography>
+            {paragraphs.map((par, index) => (
+              <Typography
+                key={index}
+                textAlign={"center"}
+                variant="body1"
+                component={"span"}
+                sx={{ fontSize: { xs: "1em", sm: "1.5em" } }}
+              >
+                {par}
+                {index == paragraphs.length ? (
+                  <></>
+                ) : (
+                  <>
+                    <br /> <br />
+                  </>
+                )}
+              </Typography>
+            ))}
           </Box>
         </Grow>
       </Box>
