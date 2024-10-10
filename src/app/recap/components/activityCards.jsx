@@ -60,7 +60,6 @@ export default function ActivityCards() {
       // ref={elementRef}
       sx={{
         display: "flex",
-        width: "100vw",
         pt: "3em",
         flexDirection: "column",
         bgcolor: "white",
@@ -80,10 +79,7 @@ export default function ActivityCards() {
         spacing={4}
         padding={4}
         sx={{
-          display: "flex",
-          flexWrap: "wrap",
           flexGrow: 1,
-          width: "100vw",
           justifyContent: "center",
           alignItems: "center",
         }}

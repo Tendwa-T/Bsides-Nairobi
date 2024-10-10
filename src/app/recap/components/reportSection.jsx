@@ -42,7 +42,6 @@ export default function RecapReports({ reportData }) {
       id="report"
       ref={elementRef}
       sx={{
-        width: "100vw",
         height: "20vh",
         pt: "1em",
         display: "flex",

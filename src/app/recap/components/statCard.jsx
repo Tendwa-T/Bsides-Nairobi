@@ -13,7 +13,6 @@ export default function StatSection() {
     <>
       <Box
         sx={{
-          width: "96vw",
           bgcolor: "#424643",
           color: "white",
           justifyContent: "center",
@@ -34,7 +33,6 @@ export default function StatSection() {
           padding={5}
           sx={{
             display: "flex",
-            width: "100vw",
             alignItems: "center",
             justifyContent: "center",
           }}
