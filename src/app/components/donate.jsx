@@ -94,7 +94,7 @@ export default function DonateSection() {
                 fontSize: { xs: "1em", sm: "1.5em" },
               }}
             >
-              Do you like the work we are doing at BSides?{" "}
+              Do you like the work we are doing at BSides Nairobi?{" "}
               <Link
                 href="https://paydexp.com/contribution/bsides-2024-conference"
                 target="_blank"

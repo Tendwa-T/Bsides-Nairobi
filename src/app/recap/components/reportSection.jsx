@@ -56,12 +56,13 @@ export default function RecapReports({ reportData }) {
         textAlign={"center"}
         justifyContent={"center"}
       >
-        <Info /> To get the full report on the {reportData.year} BSides event{" "}
+        <Info /> To get the full report on the {reportData.year} BSides Nairobi
+        event{" "}
         <Link
           target="_blank"
           rel="noopener"
           href={reportData.doc}
-          download={`BSides ${reportData.year} Report`}
+          download={`BSides Nairobi ${reportData.year} Report`}
         >
           Click here
         </Link>

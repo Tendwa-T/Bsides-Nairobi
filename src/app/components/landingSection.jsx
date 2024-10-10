@@ -121,7 +121,7 @@ export default function LandingSection({ image, eventData, recapData }) {
               zIndex: 2,
             }}
           >
-            <img src={recapData.img} width={900} height={600} />
+            <img src={recapData.img} width={650} height={500} />
           </Box>
         </Fade>
       )}

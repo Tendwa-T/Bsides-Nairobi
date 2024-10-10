@@ -53,7 +53,7 @@ export default function EventSection() {
         fontWeight={100}
         fontSize={"3em"}
       >
-        BSides Conference 2024:
+        BSides Nairobi Conference 2024:
       </Typography>
       <Typography textAlign={"center"} variant="h4" fontWeight={400}>
         New Frontiers

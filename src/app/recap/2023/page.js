@@ -29,7 +29,7 @@ export default function Recap2023() {
       />
       <RecapEventSection
         eventData={{
-          title: "BSides Conference 2023",
+          title: "BSides Nairobi Conference 2023",
           theme: "Data Breaches",
           textData:
             "In recent years there has been a rise in data breaches affecting organizations across various industries and continents and Kenya is no exception. Data breaches have far-reaching consequences, undermining trust and privacy and exposing sensitive information to malicious actors.\n\n Data breaches continue to present a challenge to organizations. How do you prevent one? What do you do in the event a data breach occurs? What steps do you take in order to successfully recover? All these are questions that linger when we see headlines of breaches.\n\n This year's conference was aimed at having these conversations, sharing knowledge and creating a collaborative environment for discussing best practices on preparedness and handling of data breaches.",

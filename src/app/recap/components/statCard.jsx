@@ -13,7 +13,7 @@ export default function StatSection() {
     <>
       <Box
         sx={{
-          width: "100vw",
+          width: "96vw",
           bgcolor: "#424643",
           color: "white",
           justifyContent: "center",

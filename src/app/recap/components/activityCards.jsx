@@ -67,14 +67,14 @@ export default function ActivityCards() {
         pb: { xs: "1em", md: "2em" },
       }}
     >
-      <Typography
-        variant="h2"
-        textAlign={"center"}
-        fontWeight={"100"}
-        fontSize={"3em"}
-      >
-        Challenge Categories
-      </Typography>
+      {/* <Typography */}
+      {/*   variant="h2" */}
+      {/*   textAlign={"center"} */}
+      {/*   fontWeight={"100"} */}
+      {/*   fontSize={"3em"} */}
+      {/* > */}
+      {/*   Challenge Categories */}
+      {/* </Typography> */}
       <Grid2
         container
         spacing={4}
