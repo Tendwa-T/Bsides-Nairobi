@@ -8,6 +8,7 @@ import ImageMarquee from "./components/images";
 import GetTicketesSection from "./components/tickets";
 import DonateSection from "./components/donate";
 import PartnerSection from "./components/partners";
+import SpeakersSection from "./components/speakers";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       />
       <AboutSection />
       <EventSection />
+      <SpeakersSection />
       <GetTicketesSection />
       <DonateSection />
       <PartnerSection />
