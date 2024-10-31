@@ -20,7 +20,7 @@ export default function ProgSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Day 1
+            Day 1 - Training
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -30,11 +30,6 @@ export default function ProgSection() {
             padding={2}
             sx={{ justifyContent: "center" }}
           >
-            <Grid2>
-              <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/training1201.jpeg" />
-              </Box>
-            </Grid2>
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
                 <img src="/images/training102.jpeg" />
@@ -46,7 +41,7 @@ export default function ProgSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Day 2
+            Day 2 - Training
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -56,14 +51,9 @@ export default function ProgSection() {
             padding={2}
             sx={{ justifyContent: "center" }}
           >
-            {/*  <Grid2>
-              <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/training201.jpeg" />
-              </Box>
-            </Grid2> */}
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/training1201.jpeg" />
+                <img src="/images/training202.jpeg" />
               </Box>
             </Grid2>
           </Grid2>
