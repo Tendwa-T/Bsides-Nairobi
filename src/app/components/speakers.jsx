@@ -1,6 +1,15 @@
 "use client";
 
-import { Box, Grid2, Grow, Typography } from "@mui/material";
+import { ArrowDropDown } from "@mui/icons-material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Grid2,
+  Grow,
+  Typography,
+} from "@mui/material";
 import { useRef, useState, useEffect } from "react";
 
 export default function SpeakersSection() {
@@ -34,41 +43,79 @@ export default function SpeakersSection() {
     };
   }, []);
 
+  const speakers = [
+    {
+      name: "Kelvin Mbogo",
+      img: "/images/speaker1.jpeg",
+      topic: "",
+    },
+    {
+      name: "Dennis Mburu",
+      img: "/images/speaker2.jpeg",
+      topic: "",
+    },
+    {
+      name: "John Kuria",
+      img: "/images/speaker3.jpeg",
+      topic: "",
+    },
+    {
+      name: "Moses Mrima Mbanga",
+      img: "/images/speaker4.jpeg",
+      topic: "",
+    },
+    {
+      name: "Cephas Okoth",
+      img: "/images/speaker5.jpeg",
+      topic: "",
+    },
+    {
+      name: "Dennis Kori Gichuki",
+      img: "/images/speaker6.jpeg",
+      topic: "",
+    },
+    {
+      name: "Alvin Mwambi",
+      img: "/images/speaker7.jpeg",
+      topic: "",
+    },
+  ];
+
   return (
-    <Box py="1em" component={"section"} id="speakers" ref={elementRef}>
-      <Grow in={inView} {...(inView ? { timeout: 1000 } : {})}>
-        <Typography
-          textAlign={"center"}
-          variant="h3"
-          fontWeight={"100"}
-          mt="0.5em"
-        >
-          Speakers
-        </Typography>
-      </Grow>
-      <Grow in={inView} timeout={2500}>
-        <Grid2 container spacing={2} padding={2} justifyContent={"center"}>
-          <Grid2>
-            <Box sx={{ width: { xs: "20em", md: "25em" } }}>
-              <img src="/images/speaker1.jpeg" alt="Speaker Poster" />
-            </Box>
-          </Grid2>
-          <Grid2>
-            <Box sx={{ width: { xs: "20em", md: "25em" } }}>
-              <img src="/images/speaker2.jpeg" alt="Speaker Poster" />
-            </Box>
-          </Grid2>
-          <Grid2>
-            <Box sx={{ width: { xs: "20em", md: "25em" } }}>
-              <img
-                src="/images/speaker3.jpeg"
-                alt="Speaker Poster"
-                width={400}
-              />
-            </Box>
-          </Grid2>
-        </Grid2>
-      </Grow>
+    <Box px="2em" component={"section"} id="speakers" ref={elementRef}>
+      <Typography
+        textAlign={"center"}
+        variant="h3"
+        fontWeight={"100"}
+        mt="0.5em"
+      >
+        Event Details
+      </Typography>
+      <Accordion>
+        <AccordionSummary expandIcon={<ArrowDropDown />}>
+          <Typography
+            textAlign={"center"}
+            variant="h5"
+            fontWeight={"300"}
+            mt="0.5em"
+          >
+            Speakers
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Grow in={inView} timeout={2500}>
+            <Grid2 container spacing={3} padding={2} justifyContent={"center"}>
+              {speakers.map((sp, index) => (
+                <Grid2 key={index}>
+                  <Box sx={{ width: { xs: "20em", md: "30em" } }}>
+                    <img src={sp.img} alt={sp.name} />
+                  </Box>
+                </Grid2>
+              ))}
+            </Grid2>
+          </Grow>
+        </AccordionDetails>
+      </Accordion>
     </Box>
   );
 }

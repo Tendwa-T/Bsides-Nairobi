@@ -19,7 +19,7 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "BSides Nairobi",
-  description: "Bsides Nairobi Official Website",
+  description: "BSides Nairobi Official Website",
 };
 
 export default function RootLayout({ children }) {
