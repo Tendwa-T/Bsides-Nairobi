@@ -107,7 +107,7 @@ export default function SpeakersSection() {
             <Grid2 container spacing={3} padding={2} justifyContent={"center"}>
               {speakers.map((sp, index) => (
                 <Grid2 key={index}>
-                  <Box sx={{ width: { xs: "20em", md: "30em" } }}>
+                  <Box sx={{ width: { xs: "18em", md: "30em" } }}>
                     <img src={sp.img} alt={sp.name} />
                   </Box>
                 </Grid2>
