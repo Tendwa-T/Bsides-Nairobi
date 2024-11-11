@@ -76,7 +76,7 @@ export default function CTFSection() {
                 Books On Offer!!! (Limited Copies)
               </Typography>
               <Box sx={{ width: { xs: "20em", md: "30em" } }}>
-                <Image
+                <img
                   src="/images/booksOnOffer.jpeg"
                   alt="Community Choice Talk"
                 />
@@ -99,7 +99,7 @@ export default function CTFSection() {
                 Community Choice Talk
               </Typography>
               <Box sx={{ width: { xs: "20em", md: "30em" } }}>
-                <Image src="/CTF.jpeg" alt="Community Choice Talk" />
+                <img src="/CTF.jpeg" alt="Community Choice Talk" />
               </Box>
             </Grid2>
             <Grid2

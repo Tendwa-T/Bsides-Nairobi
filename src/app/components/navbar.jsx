@@ -217,12 +217,12 @@ export default function NavBarComponent({ navItems }) {
                   "aria-labelledby": "recap-btn",
                 }}
               >
-                <MenuItem onClick={() => router.push("/recap/2022")}>
-                  2022 Recap
-                </MenuItem>
-                <MenuItem onClick={() => router.push("/recap/2023")}>
-                  2023 Recap
-                </MenuItem>
+                {recapPages && recapPages.map((page, index) => (
+                  <MenuItem key={index} onClick={() => router.push(`${page.url}`)}>
+                    {page.recapTitle} Recap
+                  </MenuItem>
+                ))}
+
               </Menu>
             </Box>
           </Box>
