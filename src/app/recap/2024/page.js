@@ -1,9 +1,5 @@
 "use client";
 
-import LandingSection from "./components/landingSection";
-import NavBarComponent from "./components/navbar";
-import AboutSection from "./components/aboutSection";
-import FooterSection from "./components/footerSection";
 import {
   Box,
   Button,
@@ -14,18 +10,23 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import EventSection from "./components/eventSection";
-import ImageMarquee from "./components/images";
-import GetTicketesSection from "./components/tickets";
-import DonateSection from "./components/donate";
-import PartnerSection from "./components/partners";
-import SpeakersSection from "./components/speakers";
-import CTFSection from "./components/ctf";
-import ProgSection from "./components/programSection";
+
 import { useEffect, useState } from "react";
 import { Close } from "@mui/icons-material";
+import NavBarComponent from "@/app/components/navbar";
+import LandingSection from "@/app/components/landingSection";
+import AboutSection from "@/app/components/aboutSection";
+import EventSection from "@/app/components/eventSection";
+import SpeakersSection from "@/app/components/speakers";
+import CTFSection from "@/app/components/ctf";
+import ProgSection from "@/app/components/programSection";
+import GetTicketesSection from "@/app/components/tickets";
+import DonateSection from "@/app/components/donate";
+import PartnerSection from "@/app/components/partners";
+import ImageMarquee from "@/app/components/images";
+import FooterSection from "@/app/components/footerSection";
 
-export default function Home() {
+export default function Recap2024() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     setOpen(true);
@@ -33,7 +34,7 @@ export default function Home() {
   const handleClose = () => {
     setOpen(false);
   };
-  const endDate = new Date("2024-11-15");
+  const endDate = new Date("2024-11-08");
   const today = Date.now();
 
   let diff = Math.floor((endDate - today) / (1000 * 3600 * 24));
@@ -54,8 +55,8 @@ export default function Home() {
             </IconButton>
           </DialogActions>
           <DialogTitle>
-            <Typography textAlign={"center"} fontWeight={"bold"} variant="h5">
-              Thank You !!😁
+            <Typography textAlign={"center"} variant="h5">
+              Grab Your BSides Bundle Ticket Now! 🎟️
             </Typography>
           </DialogTitle>
           <DialogContent>
@@ -67,9 +68,9 @@ export default function Home() {
               }}
             >
               <img
-                src="/images/2024/thankYou.jpeg"
+                src="/images/tickets.jpeg"
                 width={500}
-                height={500}
+                height={200}
                 alt="Ticket Modal Image"
               />
             </Box>
@@ -84,37 +85,28 @@ export default function Home() {
               }}
             >
               <Typography textAlign={"center"}>
-                To our partners, friends, and attendees—thank you for making the
-                BSides 2024 conference a success. We couldn&apos;t have done it
-                without you!
+                <strong>BSides Nairobi is ON!</strong>
+              </Typography>
+              <Typography textAlign={"center"}>
+                Don&apos;t miss out on {diff} day of mind-blowing talks,
+                hands-on workshops, and networking opportunities with
+                cybersecurity experts.
                 <br />
               </Typography>
-
               <Typography textAlign={"center"}>
-                Give us{" "}
-                <a
-                  href="https://forms.gle/E3jDhxMjrK6YChyo6"
-                  target="_blank"
-                  className="text-blue-600 hover:text-cyan-600"
-                >
-                  Feedback
-                </a>{" "}
-                on the event.
-              </Typography>
-
-              <Typography textAlign={"center"}>
-                See the{" "}
-                <a
-                  href="https://edushotit38.pixieset.com/besidesnairobi/"
-                  target="_blank"
-                  className="text-blue-600 hover:text-cyan-600"
-                >
-                  Pictures
-                </a>{" "}
-                from our event.
+                <strong>Get your ticket now!</strong>
               </Typography>
             </Box>
           </DialogContent>
+          <DialogActions>
+            <Button
+              variant="contained"
+              href="https://paydexp.com/bsides-nairobi-2024-conference"
+              target="_blank"
+            >
+              Buy
+            </Button>
+          </DialogActions>
         </Dialog>
       )}
 
@@ -127,7 +119,7 @@ export default function Home() {
           ]}
         />
         <LandingSection
-          image={"url(/images/nairobi.jpg)"}
+          image={"url(/images/2024/Recap/IMG_1685.jpg)"}
           // Event Data Goes here
           /*  eventData={{
             main: "Theme: New Frontiers",
@@ -138,13 +130,16 @@ export default function Home() {
             },
             tertiary: "United States International University - Africa",
           }} */
+          recapData={{
+            img: "/2024Recap.svg",
+          }}
         />
         <AboutSection />
-        {/* <EventSection />
+        <EventSection />
         <SpeakersSection />
         <CTFSection />
         <ProgSection />
-        <GetTicketesSection /> */}
+        <GetTicketesSection />
         <DonateSection />
         <PartnerSection />
         <ImageMarquee />

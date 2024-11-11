@@ -9,6 +9,7 @@ import {
   Grow,
   Typography,
 } from "@mui/material";
+import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 export default function CTFSection() {
@@ -47,7 +48,7 @@ export default function CTFSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Mini-Events
+            Info-Board
           </Typography>
         </AccordionSummary>
         <Grow in={inView} timeout={2500}>
@@ -72,10 +73,13 @@ export default function CTFSection() {
                 fontWeight={"100"}
                 my="0.5em"
               >
-                Capture the Flag Challenge
+                Books On Offer!!! (Limited Copies)
               </Typography>
               <Box sx={{ width: { xs: "20em", md: "30em" } }}>
-                <img src="/images/captureTF.jpeg" alt="Community Choice Talk" />
+                <Image
+                  src="/images/booksOnOffer.jpeg"
+                  alt="Community Choice Talk"
+                />
               </Box>
             </Grid2>
             <Grid2
@@ -95,7 +99,27 @@ export default function CTFSection() {
                 Community Choice Talk
               </Typography>
               <Box sx={{ width: { xs: "20em", md: "30em" } }}>
-                <img src="/CTF.jpeg" alt="Community Choice Talk" />
+                <Image src="/CTF.jpeg" alt="Community Choice Talk" />
+              </Box>
+            </Grid2>
+            <Grid2
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                textAlign={"center"}
+                variant="h3"
+                fontWeight={"100"}
+                my="0.5em"
+              >
+                Capture the Flag Challenge
+              </Typography>
+              <Box sx={{ width: { xs: "20em", md: "30em" } }}>
+                <img src="/images/captureTF.jpeg" alt="Community Choice Talk" />
               </Box>
             </Grid2>
           </Grid2>

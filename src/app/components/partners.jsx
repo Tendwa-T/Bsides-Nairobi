@@ -30,6 +30,8 @@ export default function PartnerSection() {
     "/images/partners/startinenv2.jpeg",
     "/images/partners/trendMicro.png",
     "/images/partners/usiu-logo.png",
+    "/images/partners/firstOrg.png",
+    "/images/partners/SCANairobi.png",
   ];
 
   return (
@@ -54,7 +56,7 @@ export default function PartnerSection() {
         Meet our partners
       </Typography>
       <Box sx={{ height: 200 }}>
-        <Marquee velocity={18} direction="ltr">
+        <Marquee velocity={22} direction="ltr">
           {times(7, Number).map((id) => (
             <Photo
               src={photos[id]}
@@ -65,10 +67,10 @@ export default function PartnerSection() {
         </Marquee>
       </Box>
       <Box sx={{ height: "5em" }} />
-      <Marquee velocity={18} direction="ltr">
+      <Marquee velocity={22} direction="ltr">
         {times(5, Number).map((id) => (
           <Photo
-            src={photos[id + 7]}
+            src={photos[id + 9]}
             key={`eventImage-${id + 7}`}
             sx={{ mr: "7px", ml: "80px" }}
           />

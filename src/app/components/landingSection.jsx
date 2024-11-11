@@ -1,7 +1,6 @@
 import { Box, Typography, Slide, Fade } from "@mui/material";
 
 export default function LandingSection({ image, eventData, recapData }) {
-  //"url(/images/nairobi.jpg)"
   return (
     <Box
       sx={{
@@ -23,7 +22,7 @@ export default function LandingSection({ image, eventData, recapData }) {
           width: "100%",
           height: "100%",
           background:
-            "linear-gradient(to right, rgb(0, 0, 0, 0.85), rgba(0,0,0,0.85))",
+            "linear-gradient(to right, rgb(0, 0, 0, 0.80), rgba(0,0,0,0.80))",
           zIndex: 1,
         },
       }}
@@ -81,14 +80,30 @@ export default function LandingSection({ image, eventData, recapData }) {
             >
               {eventData.main}
             </Typography>
-            <Box sx={{ height: "2em" }} />
+            <Box sx={{ height: "1em" }} />
             <Typography
               variant="h4"
               fontWeight={"bold"}
               textAlign={"center"}
               sx={{ color: "#fff", zIndex: 2, fontSize: "2.5em" }}
             >
-              {eventData.secondary}
+              {eventData.secondary.main}
+            </Typography>{" "}
+            <Typography
+              variant="body1"
+              fontWeight={"bold"}
+              textAlign={"center"}
+              sx={{ color: "#fff", zIndex: 2, fontSize: "1.2em" }}
+            >
+              {eventData.secondary.sec}
+            </Typography>{" "}
+            <Typography
+              variant="body1"
+              fontWeight={"bold"}
+              textAlign={"center"}
+              sx={{ color: "#fff", zIndex: 2, fontSize: "1.2em" }}
+            >
+              {eventData.secondary.ter}
             </Typography>
             <Typography
               variant="h4"
@@ -121,7 +136,7 @@ export default function LandingSection({ image, eventData, recapData }) {
               zIndex: 2,
             }}
           >
-            <img src={recapData.img} width={650} height={500} />
+            <img src={recapData.img} width={650} height={500} alt="Recap Image" />
           </Box>
         </Fade>
       )}

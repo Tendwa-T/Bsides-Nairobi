@@ -82,6 +82,10 @@ export default function NavBarComponent({ navItems }) {
       recapTitle: "2023",
       url: "/recap/2023",
     },
+    {
+      recapTitle: "2024",
+      url: "/recap/2024",
+    },
   ];
 
   const drawer = (
@@ -139,7 +143,7 @@ export default function NavBarComponent({ navItems }) {
     </Box>
   );
   return (
-    <Box sx={{ display: "flex", zIndex: 10 }}>
+    <Box sx={{ display: "flex", zIndex: 100 }}>
       <CssBaseline />
       <AppBar
         position="fixed"

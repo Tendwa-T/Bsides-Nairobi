@@ -282,11 +282,7 @@ export default function Recap2022() {
       </Box>
       <DonateSection />
       <PartnerSection />
-      <Box>
-        <Link href="http://localhost/learningphp/public/send_email.php">
-          Test
-        </Link>
-      </Box>
+
       <FooterSection />
     </Box>
   );

@@ -29,6 +29,25 @@ export default function ImageMarquee() {
     "/images/gallery/event7.JPG",
     "/images/gallery/event8.JPG",
     "/images/gallery/event9.JPG",
+    "/images/2024/Recap/IMG_1449.jpg",
+    "/images/2024/Recap/IMG_1464.jpg",
+    "/images/2024/Recap/IMG_1482.jpg",
+    "/images/2024/Recap/IMG_1490(1).jpg",
+    "/images/2024/Recap/IMG_1495.jpg",
+    "/images/2024/Recap/IMG_1500.jpg",
+    "/images/2024/Recap/IMG_1530.jpg",
+    "/images/2024/Recap/IMG_1539.jpg",
+    "/images/2024/Recap/IMG_1573.jpg",
+    "/images/2024/Recap/IMG_1574.jpg",
+    "/images/2024/Recap/IMG_1587.jpg",
+    "/images/2024/Recap/IMG_1597.jpg",
+    "/images/2024/Recap/IMG_1623.jpg",
+    "/images/2024/Recap/IMG_1627.jpg",
+    "/images/2024/Recap/IMG_1642.jpg",
+    "/images/2024/Recap/IMG_1645.jpg",
+    "/images/2024/Recap/IMG_1704.jpg",
+    "/images/2024/Recap/IMG_1685.jpg",
+    "/images/2024/Recap/IMG_1680.jpg",
   ];
   return (
     <Box
@@ -53,7 +72,7 @@ export default function ImageMarquee() {
       </Typography>
       <Box sx={{ height: 200 }}>
         <Marquee velocity={16}>
-          {times(7, Number).map((id) => (
+          {times(15, Number).map((id) => (
             <Photo
               src={photos[id]}
               key={`eventImage-${id}`}
@@ -64,10 +83,10 @@ export default function ImageMarquee() {
       </Box>
       <Box sx={{ height: "5em" }} />
       <Marquee velocity={16}>
-        {times(7, Number).map((id) => (
+        {times(15, Number).map((id) => (
           <Photo
-            src={photos[id + 7]}
-            key={`eventImage-${id + 7}`}
+            src={photos[id + 15]}
+            key={`eventImage-${id + 15}`}
             sx={{ ml: "7px", mr: "80px" }}
           />
         ))}

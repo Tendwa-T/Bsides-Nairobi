@@ -2,6 +2,7 @@
 
 import { ArrowDropDown } from "@mui/icons-material";
 
+
 const {
   Box,
   Accordion,
@@ -20,7 +21,7 @@ export default function ProgSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Day 1 - Training
+            5th November - Training
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -32,7 +33,12 @@ export default function ProgSection() {
           >
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/training102.jpeg" />
+                <img src="/images/training102.jpeg" alt="Training Day 1" />
+              </Box>
+            </Grid2>{" "}
+            <Grid2>
+              <Box sx={{ width: { md: "45em" } }}>
+                <img src="/images/progDayT011.jpeg" alt="Training Day 1" />
               </Box>
             </Grid2>
           </Grid2>
@@ -41,7 +47,7 @@ export default function ProgSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Day 2 - Training
+            6th November - Training
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -53,7 +59,12 @@ export default function ProgSection() {
           >
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/training202.jpeg" />
+                <img src="/images/training202.jpeg" alt="Training Day 2" />
+              </Box>
+            </Grid2>
+            <Grid2>
+              <Box sx={{ width: { md: "45em" } }}>
+                <img src="/images/progDayT021.jpeg" alt="Training Day 2" />
               </Box>
             </Grid2>
           </Grid2>
@@ -62,7 +73,7 @@ export default function ProgSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Day 3
+            7th November - Conference
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -74,12 +85,12 @@ export default function ProgSection() {
           >
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/progDay101.jpeg" />
+                <img src="/images/day301.jpeg" alt="Day 3" />
               </Box>
             </Grid2>
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/progDay102.jpeg" />
+                <img src="/images/day302.jpeg" alt="Day 3" />
               </Box>
             </Grid2>
           </Grid2>
@@ -88,7 +99,7 @@ export default function ProgSection() {
       <Accordion>
         <AccordionSummary expandIcon={<ArrowDropDown />}>
           <Typography variant="h5" fontWeight={"300"}>
-            Day 4
+            8th November - Conference
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -100,12 +111,12 @@ export default function ProgSection() {
           >
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/progDay201.jpeg" />
+                <img src="/images/day401.jpeg" alt="Day 4" />
               </Box>
             </Grid2>
             <Grid2>
               <Box sx={{ width: { md: "45em" } }}>
-                <img src="/images/progDay202.jpeg" />
+                <img src="/images/day402.jpeg" alt="Day 4" />
               </Box>
             </Grid2>
           </Grid2>
