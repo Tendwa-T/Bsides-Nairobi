@@ -115,7 +115,6 @@ export default function Recap2024() {
           navItems={[
             { title: "Home", route: "/", sectionID: "" },
             { title: "About", route: "/", sectionID: "about" },
-            { title: "Events", route: "/", sectionID: "event" },
           ]}
         />
         <LandingSection

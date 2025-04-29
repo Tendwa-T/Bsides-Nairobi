@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
 export default function FooterSection() {
+  const year = new Date().getFullYear();
   return (
     <>
       <Box
@@ -11,10 +12,9 @@ export default function FooterSection() {
           justifyContent: "center",
           alignItems: "center",
           bgcolor: "black",
-          color: "white",
         }}
       >
-        <Typography>&copy; All Rights Reserved 2024</Typography>
+        <Typography sx={{ color: 'gray' }}>&copy; All Rights Reserved {year} </Typography>
       </Box>
     </>
   );

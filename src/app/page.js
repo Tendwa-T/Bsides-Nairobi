@@ -123,21 +123,20 @@ export default function Home() {
           navItems={[
             { title: "Home", route: "/", sectionID: "" },
             { title: "About", route: "/", sectionID: "about" },
-            { title: "Events", route: "/", sectionID: "event" },
           ]}
         />
         <LandingSection
           image={"url(/images/nairobi.jpg)"}
           // Event Data Goes here
-          /*  eventData={{
-            main: "Theme: New Frontiers",
+          eventData={{
+            main: "Upcoming Event:",
             secondary: {
-              main: "5th - 8th November",
-              sec: " 5th & 6th - Training",
-              ter: "7th & 8th - Conference",
+              main: "Vulnerability Disclosure and Bug Bounty Edition",
+              sec: "Date: July 7th 2025",
+              ter: "Location: Michael Joseph Centre, Nairobi",
             },
-            tertiary: "United States International University - Africa",
-          }} */
+            tertiary: "",
+          }}
         />
         <AboutSection />
         {/* <EventSection />
@@ -145,7 +144,7 @@ export default function Home() {
         <CTFSection />
         <ProgSection />
         <GetTicketesSection /> */}
-        <DonateSection />
+        {/* <DonateSection /> */}
         <PartnerSection />
         <ImageMarquee />
         <FooterSection />

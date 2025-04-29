@@ -192,12 +192,12 @@ export default function NavBarComponent({ navItems }) {
                 {item.title}
               </Button>
             ))}{" "}
-            <Button
+            {/*  <Button
               href="https://paydexp.com/contribution/bsides-2024-conference"
               target="_blank"
             >
               Donate
-            </Button>
+            </Button> */}
             <Box sx={{ zIndex: 10 }}>
               <Button
                 id="recap-btn"
