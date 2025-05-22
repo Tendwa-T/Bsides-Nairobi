@@ -132,7 +132,7 @@ export default function Home() {
             main: "Upcoming Event:",
             secondary: {
               main: "Vulnerability Disclosure and Bug Bounty Edition",
-              sec: "Date: July 7th 2025",
+              sec: "Date: June 7th 2025",
               ter: "Location: Michael Joseph Centre, Nairobi",
             },
             tertiary: "",
