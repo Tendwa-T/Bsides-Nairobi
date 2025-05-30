@@ -27,6 +27,43 @@ import ImageMarquee from "@/app/components/images";
 import FooterSection from "@/app/components/footerSection";
 
 export default function Recap2024() {
+  const speakers = [
+    {
+      name: "Kelvin Mbogo",
+      img: "/images/speaker1.jpeg",
+      topic: "",
+    },
+    {
+      name: "Dennis Mburu",
+      img: "/images/speaker2.jpeg",
+      topic: "",
+    },
+    {
+      name: "John Kuria",
+      img: "/images/speaker3.jpeg",
+      topic: "",
+    },
+    {
+      name: "Moses Mrima Mbanga",
+      img: "/images/speaker4.jpeg",
+      topic: "",
+    },
+    {
+      name: "Cephas Okoth",
+      img: "/images/speaker5.jpeg",
+      topic: "",
+    },
+    {
+      name: "Dennis Kori Gichuki",
+      img: "/images/speaker6.jpeg",
+      topic: "",
+    },
+    {
+      name: "Alvin Mwambi",
+      img: "/images/speaker7.jpeg",
+      topic: "",
+    },
+  ];
   const [open, setOpen] = useState(false);
   useEffect(() => {
     setOpen(true);
@@ -135,7 +172,7 @@ export default function Recap2024() {
         />
         <AboutSection />
         <EventSection />
-        <SpeakersSection />
+        <SpeakersSection speakers={speakers} />
         <CTFSection />
         <ProgSection />
         <GetTicketesSection />

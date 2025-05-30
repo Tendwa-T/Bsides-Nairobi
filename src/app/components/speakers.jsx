@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { ArrowDropDown } from "@mui/icons-material";
@@ -12,7 +13,7 @@ import {
 } from "@mui/material";
 import { useRef, useState, useEffect } from "react";
 
-export default function SpeakersSection() {
+export default function SpeakersSection({ speakers }) {
   const [inView, setInView] = useState(false);
   const elementRef = useRef(null);
 
@@ -43,43 +44,7 @@ export default function SpeakersSection() {
     };
   }, []);
 
-  const speakers = [
-    {
-      name: "Kelvin Mbogo",
-      img: "/images/speaker1.jpeg",
-      topic: "",
-    },
-    {
-      name: "Dennis Mburu",
-      img: "/images/speaker2.jpeg",
-      topic: "",
-    },
-    {
-      name: "John Kuria",
-      img: "/images/speaker3.jpeg",
-      topic: "",
-    },
-    {
-      name: "Moses Mrima Mbanga",
-      img: "/images/speaker4.jpeg",
-      topic: "",
-    },
-    {
-      name: "Cephas Okoth",
-      img: "/images/speaker5.jpeg",
-      topic: "",
-    },
-    {
-      name: "Dennis Kori Gichuki",
-      img: "/images/speaker6.jpeg",
-      topic: "",
-    },
-    {
-      name: "Alvin Mwambi",
-      img: "/images/speaker7.jpeg",
-      topic: "",
-    },
-  ];
+
 
   return (
     <Box px="2em" component={"section"} id="speakers" ref={elementRef}>
@@ -107,8 +72,9 @@ export default function SpeakersSection() {
             <Grid2 container spacing={3} padding={2} justifyContent={"center"}>
               {speakers.map((sp, index) => (
                 <Grid2 key={index}>
-                  <Box sx={{ width: { xs: "18em", md: "30em" } }}>
+                  <Box sx={{ display: { xs: 'block', md: 'flex' }, width: { xs: "18em", md: "30em" } }}>
                     <img src={sp.img} alt={sp.name} />
+                    <p>Hello</p>
                   </Box>
                 </Grid2>
               ))}
