@@ -74,7 +74,6 @@ export default function SpeakersSection({ speakers }) {
                 <Grid2 key={index}>
                   <Box sx={{ display: { xs: 'block', md: 'flex' }, width: { xs: "18em", md: "30em" } }}>
                     <img src={sp.img} alt={sp.name} />
-                    <p>Hello</p>
                   </Box>
                 </Grid2>
               ))}

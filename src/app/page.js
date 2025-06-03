@@ -6,7 +6,6 @@ import AboutSection from "./components/aboutSection";
 import FooterSection from "./components/footerSection";
 import {
   Box,
-  Button,
   Dialog,
   DialogActions,
   DialogContent,
@@ -14,17 +13,17 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import EventSection from "./components/eventSection";
-import ImageMarquee from "./components/images";
+/* import EventSection from "./components/eventSection";
 import GetTicketesSection from "./components/tickets";
 import DonateSection from "./components/donate";
-import PartnerSection from "./components/partners";
 import SpeakersSection from "./components/speakers";
 import CTFSection from "./components/ctf";
-import ProgSection from "./components/programSection";
+import ProgSection from "./components/programSection"; */
 import { useEffect, useState } from "react";
+import PartnerSection from "./components/partners";
 import { Close } from "@mui/icons-material";
 import SpeakersSectionRedesign from "./components/speakersRedesign";
+import ImageMarquee from "./components/images";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -58,12 +57,32 @@ export default function Home() {
         "I'm Cheroben Alvin (Crius), and today I'm excited to share some real stories from my bug bounty hunting journey. The cool bugs I've discovered, the challenges I faced, and the lessons I learned along the way. Bug bounty hunting is not just about finding vulnerabilities, it's about creativity, persistence, and thinking outside the box. Whether you're new to bug hunting or a seasoned pro, I hope these stories inspire you to sharpen your skills and maybe even discover your next big find.",
     },
     {
-      name: "Alfie Njeru",
-      title: "Director, Technology Services",
-      img: "",
-      topic: "I thought it was RCE, it was a ping",
+      name: "Jones Baraza",
+      title:
+        "Global Award Winner | Digital Security Specialist | CSO & HRD Protection | Anti-Surveillance Research | Secure Tech Advocacy | Africa Focus",
+      img: "/images/2025/speakers/JonesBaraza.jpg",
+      topic:
+        "Bug Bounty: Addressing the Hurdles of Vulnerability Disclosure in Kenya's Digital Economy",
       description:
-        "Alfie Njeru is a seasoned cybersecurity professional and one of Africa's leading voices in ethical hacking. He has made notable contributions to the global bug bounty community through responsible disclosure and in-depth technical analysis of security vulnerabilities. He is the first Bugcrowd Ambassador from Africa and a HackerOne Kenya Co-Ambassador, where he actively promotes responsible hacking and mentorship across the continent. Alfie's disclosures have been acknowledged by major organizations including Microsoft, Oracle, Nokia, BBC, JP Morgan Chase, BMW, Dell, the United Nations, UN Women, Telecom Italia, Envato, Philips, Ericsson, Shopclues, Europa, Siemens, Open Bug Bounty, and others. His commitment to responsible disclosure earned him a prestigious challenge coin from the UK's National Cyber Security Centre (NCSC) — a rare honor in global vulnerability research. Beyond research, Alfie is deeply committed to knowledge sharing. He has contributed over 20 submissions to the Google Hacking Database and Exploit-DB, reviewed content for the Certificate of Cloud Security Knowledge (CCSK v5), and authored the Windows Security Auditing course. Currently serving as Director, Technology Services, he continues to lead and innovate in the cybersecurity landscape.",
+        "Jones Baraza is a digital security leader and senior engineer with over a decade of experience in offensive and defensive security, DevSecOps, and risk management. He has a proven track record in architecting secure systems, leading red team programs, and developing open-source solutions. Jones is also the Co-founder & CTO of CTFROOM, a pioneering cyber range platform revolutionizing security training through gamified challenges",
+    },
+    {
+      name: "Lawrence Muchilwa",
+      title:
+        "FIRST Africa Regional National CSIRTs | Cybersecurity Policy & Governance Specialist | Building Africa Incident Response Communities",
+      img: "/images/2022/speakers/LawrenceMuc.webp",
+      topic:
+        "Bug Bounty: Addressing the Hurdles of Vulnerability Disclosure in Kenya's Digital Economy",
+      description:
+        "Lawrence Muchilwa is a seasoned cybersecurity professional and regional cyber diplomat with over a decade of experience in security operations, digital forensics, and incident response. As the African Regional Liaison for the Forum of Incident Response and Security Teams (FIRST) and a Fellow at the Africa Cyber Defense Forum (ACDF), he plays a pivotal role in strengthening cross-border collaboration on cyber threat intelligence and incident coordination. Lawrence has worked closely with national CSIRTs across Africa, providing technical capacity-building and strategic guidance informed by real-world challenges. With a strong academic background—including a PhD in progress and a Master’s in Information Systems Technology—he bridges the gap between technical expertise and policy engagement, fostering resilient cybersecurity ecosystems across East Africa.",
+    },
+    {
+      name: "Enoch Mahila",
+      title: "Bug Bounty Hunter",
+      img: "/images/2025/speakers/EnochMahila.jpg",
+      topic: "Getting Started With Bug Hunting",
+      description:
+        "My name is Enoch Mahila (Mailler) and I am excited to share with you on breaking into bug hunting. We will focus on the core aspects to keep in mind especially when beginning your journey, which kind of bugs are suited for beginners and the need for balancing learning and improving your skill set.",
     },
 
     /*    {
@@ -146,7 +165,7 @@ export default function Home() {
                 src="/images/2024/thankYou.jpeg"
                 width={500}
                 height={500}
-                alt="Ticket Modal Image"
+                alt="Ticket Modal"
               />
             </Box>
             <Box sx={{ my: "1em" }} />

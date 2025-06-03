@@ -69,8 +69,8 @@ export default function SpeakersSectionRedesign({ speakers }) {
             >
                 Speakers
             </Typography>
-            <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDown />}>
+            <Accordion defaultExpanded>
+                <AccordionSummary expandIcon={<ArrowDropDown />} >
                     <Typography
                         textAlign={"center"}
                         variant="h5"
