@@ -1,9 +1,5 @@
 "use client";
 
-import LandingSection from "./components/landingSection";
-import NavBarComponent from "./components/navbar";
-import AboutSection from "./components/aboutSection";
-import FooterSection from "./components/footerSection";
 import {
   Box,
   Dialog,
@@ -20,10 +16,16 @@ import SpeakersSection from "./components/speakers";
 import CTFSection from "./components/ctf";
 import ProgSection from "./components/programSection"; */
 import { useEffect, useState } from "react";
-import PartnerSection from "./components/partners";
+
 import { Close } from "@mui/icons-material";
-import SpeakersSectionRedesign from "./components/speakersRedesign";
-import ImageMarquee from "./components/images";
+
+import LandingSection from "@/app/components/landingSection";
+import NavBarComponent from "@/app/components/navbar";
+import AboutSection from "@/app/components/aboutSection";
+import FooterSection from "@/app/components/footerSection";
+import PartnerSection from "@/app/components/partners";
+import SpeakersSectionRedesign from "@/app/components/speakersRedesign";
+import ImageMarquee from "@/app/components/images";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -84,39 +86,53 @@ export default function Home() {
       description:
         "My name is Enoch Mahila (Mailler) and I am excited to share with you on breaking into bug hunting. We will focus on the core aspects to keep in mind especially when beginning your journey, which kind of bugs are suited for beginners and the need for balancing learning and improving your skill set.",
     },
-    {
-      name: "Pharace Moraa",
-      title: "Senior Manager, Cyber Secure by Design",
+
+    /*    {
+      name: "John Ombagi Nyabuti",
+      title: "Founder and Principal Consultant at NCT | OSCE",
       img: "",
-      gender: "female",
-      topic:
-        "Hack with Impact: Understanding and Contributing to Safaricom's Bug Bounty Program",
-      description:
-        "Pharace leads key cybersecurity initiatives at Safaricom including the company's bug bounty program hosted on Bug Crowd. She is passionate about ethical hacking, secure development, and fostering collaboration between organizations and the security researcher community. This session explores how Safaricom leverages its bug bounty program on bug crowd to strengthen its cybersecurity posture through ethical hacking. Discover how the program works, how to participate, what qualifies for rewards, and how we're building a responsive and collaborative researcher experience.",
+      topic: "TBD",
+      description: "TBD",
     },
     {
-      name: "Alfred Magara",
-      title: "Director, Technology Services",
+      name: "Tahaa Farooq",
+      title: "TBD",
       img: "",
-      gender: "Male",
-      topic: "I thought it was RCE, it was a ping",
-      description: `Alfie Njeru is a seasoned cybersecurity professional and one of Africa's leading voices in ethical hacking. He has made notable contributions to the global bug bounty community through responsible disclosure and in-depth technical analysis of security vulnerabilities.
-He is the first Bugcrowd Ambassador from Africa and a HackerOne Kenya Co-Ambassador, where he actively promotes responsible hacking and mentorship across the continent.
-Alfie's disclosures have been acknowledged by major organizations including Microsoft, Oracle, Nokia, BBC, JP Morgan Chase, BMW, Dell, the United Nations, UN Women, Telecom Italia, Envato, Philips, Ericsson, Shopclues, Europa, Siemens, Open Bug Bounty, and others. His commitment to responsible disclosure earned him a prestigious challenge coin from the UK’s National Cyber Security Centre (NCSC) — a rare honor in global vulnerability research.
-Beyond research, Alfie is deeply committed to knowledge sharing. He has contributed over 20 submissions to the Google Hacking Database and Exploit-DB, reviewed content for the Certificate of Cloud Security Knowledge (CCSK v5), and authored the Windows Security Auditing course.
-Currently serving as Director, Technology Services he continues to lead and innovate in the cybersecurity landscape.
-`,
-    },
-    /*  {
-      name: "Trey Daley",
-      title: "Senior Manager, Cyber Secure by Design",
-      img: "",
-      gender: "male",
-      topic:
-        "Hack with Impact: Understanding and Contributing to Safaricom's Bug Bounty Program",
-      description:
-        "Pharace leads key cybersecurity initiatives at Safaricom including the company's bug bounty program hosted on Bug Crowd. She is passionate about ethical hacking, secure development, and fostering collaboration between organizations and the security researcher community. This session explores how Safaricom leverages its bug bounty program on bug crowd to strengthen its cybersecurity posture through ethical hacking. Discover how the program works, how to participate, what qualifies for rewards, and how we're building a responsive and collaborative researcher experience.",
+      topic: "TBD",
+      description: "TBD",
     }, */
+    /*
+    {
+      name: "Dennis Mburu",
+      img: "/images/speaker2.jpeg",
+      description: "",
+    },
+    {
+      name: "John Kuria",
+      img: "/images/speaker3.jpeg",
+      description: "",
+    },
+    {
+      name: "Moses Mrima Mbanga",
+      img: "/images/speaker4.jpeg",
+      description: "",
+    },
+    {
+      name: "Cephas Okoth",
+      img: "/images/speaker5.jpeg",
+      description: "",
+    },
+    {
+      name: "Dennis Kori Gichuki",
+      img: "/images/speaker6.jpeg",
+      description: "",
+    },
+    {
+      name: "Alvin Mwambi",
+      img: "/images/speaker7.jpeg",
+      description: "",
+    },
+    */
   ];
 
   return (
@@ -209,20 +225,21 @@ Currently serving as Director, Technology Services he continues to lead and inno
         <LandingSection
           image={"url(/images/nairobi.jpg)"}
           // Event Data Goes here
-          eventData={{
-            main: "BSIDES NAIROBI 2025",
+          /*  eventData={{
+            main: "Upcoming Event:",
             secondary: {
-              title: "Building Cyber resilience through Assurance and Response",
-              date: "09:00 AM, Dec 10, 2025",
-              location: "",
-              description:
-                "BSides Nairobi 2025 comes at a critical moment to bring together cybersecurity professionals, policymakers, researchers, and innovators with one goal: strengthening Kenya’s cyber resilience. Guided by the principle “It’s not if, but when you are hacked,” this year’s edition focuses on reducing the attack surface through proactive cyber assurance",
+              main: "Vulnerability Disclosure and Bug Bounty Edition",
+              sec: "Date: June 7th 2025",
+              ter: "Location: Michael Joseph Centre, Nairobi",
             },
             tertiary: "",
+          }} */
+          recapData={{
+            img: "/2025Recap.svg",
           }}
         />
         <AboutSection />
-        {/* <SpeakersSectionRedesign speakers={speakers} /> */}
+        <SpeakersSectionRedesign speakers={speakers} />
         {/*<EventSection />
         <CTFSection />
         <ProgSection />

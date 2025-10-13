@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { ArrowDropDown } from "@mui/icons-material";
+import { ArrowDropDown, Person, Person2 } from "@mui/icons-material";
 import {
     Accordion,
     AccordionDetails,
@@ -14,6 +14,8 @@ import {
     Typography,
 } from "@mui/material";
 import { useRef, useState, useEffect } from "react";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 export default function SpeakersSectionRedesign({ speakers }) {
     const [inView, setInView] = useState(false);
@@ -67,7 +69,7 @@ export default function SpeakersSectionRedesign({ speakers }) {
                 fontWeight={"100"}
                 mt="0.5em"
             >
-                Speakers
+                Event Details
             </Typography>
             <Accordion defaultExpanded>
                 <AccordionSummary expandIcon={<ArrowDropDown />} >
@@ -93,11 +95,27 @@ export default function SpeakersSectionRedesign({ speakers }) {
                                             justifyContent: 'center',
                                             alignItems: 'center',
                                             p: 2,
-                                            minHeight: maxHeight ? `${maxHeight}px` : undefined,
+                                            minHeight: { md: maxHeight ? `${maxHeight}px` : undefined, },
                                             boxSizing: 'border-box'
                                         }}
                                     >
-                                        <Avatar src={sp.img} alt={sp.name} sx={{ width: 200, height: 200, marginRight: 2 }} />
+                                        <Avatar
+                                            src={sp.img}
+                                            alt={sp.name}
+                                            sx={{ width: 200, height: 200, marginRight: 2 }}
+                                        >
+                                            {!sp.img && (
+                                                sp.gender === "female"
+                                                    ? (
+                                                        // Female fallback icon (e.g., emoji or SVG)
+                                                        <Person2 sx={{ width: 100, height: 100 }} />
+                                                    )
+                                                    : (
+                                                        // Male fallback icon (default)
+                                                        <Person sx={{ width: 100, height: 100 }} />
+                                                    )
+                                            )}
+                                        </Avatar>
                                         <Box sx={{ flexGrow: 1, justifyContent: 'center', }}>
                                             <Box sx={{ display: { xs: 'block', md: 'flex' }, alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-start' } }}>
                                                 <Typography variant="h4" fontWeight="bold">
@@ -118,6 +136,35 @@ export default function SpeakersSectionRedesign({ speakers }) {
                                 </Grid2>
                             ))}
                         </Grid2>
+                    </Grow>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion defaultExpanded>
+                <AccordionSummary expandIcon={<ArrowDropDown />} >
+                    <Typography
+                        textAlign={"center"}
+                        variant="h5"
+                        fontWeight={"300"}
+                        mt="0.5em"
+                    >
+                        Event Program
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Grow in={inView} timeout={2500}>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+                            <PhotoProvider>
+                                <PhotoView src="/images/2025/program/BSIDES June 7th Program.jpeg">
+                                    <img
+                                        src="/images/2025/program/BSIDES June 7th Program.jpeg"
+                                        alt="Event Program"
+                                        className="md:h-[85vh]"
+                                    />
+                                </PhotoView>
+                            </PhotoProvider>
+
+                        </Box>
+
                     </Grow>
                 </AccordionDetails>
             </Accordion>

@@ -20,7 +20,8 @@
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-marquee-slider": "^1.1.5"
+    "react-marquee-slider": "^1.1.5",
+    "react-photo-view": "^1.2.7"
   },
   "devDependencies": {
     "eslint": "^8",

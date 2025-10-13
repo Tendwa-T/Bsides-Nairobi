@@ -45,7 +45,7 @@ export default function NavBarComponent({ navItems }) {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > window.innerHeight - 500) {
+    if (offset > window.innerHeight - 700) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -86,6 +86,10 @@ export default function NavBarComponent({ navItems }) {
       recapTitle: "2024",
       url: "/recap/2024",
     },
+    {
+      recapTitle: "2025",
+      url: "/recap/2025",
+    },
   ];
 
   const drawer = (
@@ -106,16 +110,6 @@ export default function NavBarComponent({ navItems }) {
           </ListItem>
         ))}
         <ListItem key={"drawerBtn"} disablePadding>
-          <ListItemButton
-            sx={{ textAlign: "center" }}
-            onClick={() =>
-              router.push(
-                "https://paydexp.com/contribution/bsides-2024-conference",
-              )
-            }
-          >
-            <ListItemText primary={"Donate"} />
-          </ListItemButton>
         </ListItem>
         <ListItem key={"recap-nest"} disablePadding>
           <ListItemButton>
@@ -148,7 +142,7 @@ export default function NavBarComponent({ navItems }) {
       <AppBar
         position="fixed"
         component={"nav"}
-        sx={{ color: "#fff" }}
+        sx={{ color: "#fff", boxShadow: "none" }}
         style={{
           backgroundColor: isScrolled ? "#000000" : "transparent",
           transition: "background-color 0.3s ease-in-out",
@@ -187,7 +181,7 @@ export default function NavBarComponent({ navItems }) {
                 onClick={() =>
                   scrollToSection(`${item.route}`, `${item.sectionID}`)
                 }
-                sx={{ color: "#fff" }}
+                sx={{ color: "#fff", ":hover": { color: "#cc2320", bgcolor: "#bdbdbd" } }}
               >
                 {item.title}
               </Button>
@@ -205,6 +199,7 @@ export default function NavBarComponent({ navItems }) {
                 aria-haspopup="true"
                 aria-expanded={menuOpen ? "true" : undefined}
                 onClick={handleMenuClick}
+                sx={{ color: 'white', ":hover": { color: "#cc2320", bgcolor: "#bdbdbd" } }}
               >
                 Recap
               </Button>
@@ -247,6 +242,6 @@ export default function NavBarComponent({ navItems }) {
           {drawer}
         </Drawer>
       </nav>
-    </Box>
+    </Box >
   );
 }
